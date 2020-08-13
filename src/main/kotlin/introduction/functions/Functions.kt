@@ -1,4 +1,4 @@
-package introduction
+package introduction.functions
 
 /**
  * <B>Description:</B> 简略写法 <br>

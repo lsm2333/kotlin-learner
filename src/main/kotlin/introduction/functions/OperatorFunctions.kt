@@ -1,4 +1,4 @@
-package introduction
+package introduction.functions
 
 /**
  * 可以将方法升级成为操作符，相当于替换操作符语义
