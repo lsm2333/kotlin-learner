@@ -30,11 +30,15 @@ fun main() {
     simon likes ironMan
     simon likes superMan
     simon.selfIntroduce()
+
+    infix fun Person.dislike(other: Person) = println("$this dislikes $other")
+    val huiTaiLang = Person("huiTaiLang")
+    simon dislike huiTaiLang
 }
 
 class Person(private val name: String) {
     private val likedPeople = mutableListOf<Person>()
-    infix fun likes(other: Person) {
+    infix fun likes(other: Person) {//此时第一参数为Person类
         likedPeople.add(other)
     }
 
