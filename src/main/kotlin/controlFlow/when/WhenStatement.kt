@@ -1,4 +1,4 @@
-package controlFlow
+package controlFlow.`when`
 
 fun cases(obj: Any) {
     //所有条件被按顺序匹配，第一个满足的分支会被执行

@@ -1,4 +1,4 @@
-package controlFlow
+package controlFlow.`when`
 
 fun main() {
     class MyClass
