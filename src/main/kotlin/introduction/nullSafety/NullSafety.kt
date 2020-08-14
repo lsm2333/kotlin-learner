@@ -46,6 +46,15 @@ fun main() {
     strLength(neverNull)
     strLength(nullable)
 
+    /**
+     * 利用？来定义可空入参，并对null进行判断
+     *
+     * @date 2020-08-14 10:57
+     * @param maybeString 可空入参
+     * @return
+     * @author shengming.lin
+     * @see
+     **/
     fun describeString(maybeString: String?) {
         if (maybeString != null && maybeString.isNotEmpty()) {
             println("String of length: ${maybeString.length}")
