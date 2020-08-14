@@ -16,11 +16,20 @@ data class Order(val items: Collection<Item>)
 
 // 给Order类添加maxPricedItemValue这个拓展方法
 fun Order.maxPricedItemValue(): Float = this.items.maxBy { it.price }?.price ?: 0F
+
 // 给Order类添加maxPricedItemName这个拓展方法
 fun Order.maxPricedItemName() = this.items.maxBy { it.price }?.name ?: "NO_PRODUCTS"
+
 // 给Order类添加commaDelimitedItemNames这个拓展属性
 val Order.commaDelimitedItemNames: String
     get() = items.map { it.name }.joinToString()
+
+//给MutableList添加swap方法
+fun <T> MutableList<T>.swap(index1: Int, index2: Int) {
+    val tmp = this[index1] // “this”对应该列表
+    this[index1] = this[index2]
+    this[index2] = tmp
+}
 
 fun main() {
 
@@ -30,4 +39,8 @@ fun main() {
     println("Max priced item value: ${order.maxPricedItemValue()}")
     println("Items: ${order.commaDelimitedItemNames}")
 
+    val list = mutableListOf(1, 2, 3, 4, 5)
+    println(list)
+    list.swap(4, 0)
+    println(list)
 }
