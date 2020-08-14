@@ -45,5 +45,15 @@ fun main() {
 
     strLength(neverNull)
     strLength(nullable)
+
+    fun describeString(maybeString: String?) {
+        if (maybeString != null && maybeString.isNotEmpty()) {
+            println("String of length: ${maybeString.length}")
+        } else {
+            println("String is empty or null")
+        }
+    }
+    describeString(neverNull)
+    describeString(nullable)
 }
 
