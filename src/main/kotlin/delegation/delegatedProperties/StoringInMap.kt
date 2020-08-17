@@ -1,4 +1,4 @@
-package delegation.delegationPattern
+package delegation.delegatedProperties
 
 class User(map: Map<String, Any?>) {
     //根据属性名从map中找到key获取value

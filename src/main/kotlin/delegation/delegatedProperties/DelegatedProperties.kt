@@ -1,4 +1,4 @@
-package delegation.delegationPattern
+package delegation.delegatedProperties
 
 import kotlin.reflect.KProperty
 
