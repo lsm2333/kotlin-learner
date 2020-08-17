@@ -4,7 +4,7 @@ val systemUsers: MutableList<Int> = mutableListOf(1, 2, 3)
 val sudoers: List<Int> = systemUsers //systemUsers被强转成List并被赋值给sudoers
 
 fun addSudoer(newUser: Int) {
-    systemUsers.add(newUser)
+    systemUsers.add(newUser) //sudoers也会更新，因为指向同一个对象
 }
 
 fun getSysSudoers(): List<Int> {
