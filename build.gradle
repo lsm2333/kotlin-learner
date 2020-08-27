@@ -1,7 +1,5 @@
 plugins {
-    id 'kotlin-multiplatform' version '1.3.10'
-    id 'application'
-    id 'org.jetbrains.kotlin.plugin.serialization' version "1.3.70"
+    id 'org.jetbrains.kotlin.jvm' version '1.4.0'
 }
 
 group 'com.simon.kotlin'
@@ -13,7 +11,6 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-js'
 }
 
 compileKotlin {
@@ -21,27 +18,4 @@ compileKotlin {
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
-}
-
-kotlin {
-    targets {
-        fromPreset(presets.jvm, 'jvm')
-        fromPreset(presets.js, 'js')
-        // For ARM, preset should be changed to presets.iosArm32 or presets.iosArm64
-        // For Linux, preset should be changed to e.g. presets.linuxX64
-        // For MacOS, preset should be changed to e.g. presets.macosX64
-        fromPreset(presets.macosX64, 'macos')
-    }
-    sourceSets {
-        commonMain {
-            dependencies {
-                implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
-            }
-        }
-        jsMain {
-            dependencies {
-                implementation 'org.jetbrains.kotlin:kotlin-stdlib-js'
-            }
-        }
-    }
 }
